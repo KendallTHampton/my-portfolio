@@ -2,7 +2,6 @@ import {Box, Card, CardActions, CardContent, Collapse, Button, Typography, CardA
 import React, {useEffect, useState} from 'react'
 import Section from '../components/Section'
 import {createClient} from '@sanity/client';
-import {height} from '@mui/system';
 
 const client = createClient({
     projectId: 'sohbnlp6',

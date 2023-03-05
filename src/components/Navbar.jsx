@@ -2,18 +2,15 @@ import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {setTheme} from '../store/reducers/theme';
 import {useTheme, useMediaQuery} from '@mui/material';
-
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import NightsStayOutlinedIcon from '@mui/icons-material/NightsStayOutlined';
-import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import {Outlet, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 
 
