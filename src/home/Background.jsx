@@ -1,4 +1,4 @@
-import {Box, Button, Divider, Typography, useMediaQuery} from '@mui/material'
+import {Box, Button, Typography, useMediaQuery} from '@mui/material'
 import React from 'react'
 import Section from '../components/Section'
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
@@ -6,36 +6,6 @@ import FactCheckOutlinedIcon from '@mui/icons-material/FactCheckOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import {useTheme} from '@emotion/react';
 import "./Background.css"
-
-
-
-
-const backgroundData = [
-    {
-        experience: [
-            {
-                name: 'Company Name',
-                title: 'Job Title',
-                description: 'Job Description',
-            },
-            {
-                name: 'Company Name',
-                title: 'Job Title',
-                description: 'Job Description',
-            }
-        ],
-        education: [
-            {
-                name: 'School Name',
-                title: 'Degree',
-                description: 'Description',
-                gpa: '3',
-
-            },
-
-        ]
-    },
-]
 
 
 const Background = () => {
