@@ -1,0 +1,314 @@
+/* CSS Variables */
+
+:root {
+
+    /* Light Colors */
+    --mainTextColor: #000;
+    --secondaryTextColor: #2a2a2a;
+    --mainLinkColor: #18cc546e;
+    --mainBorderColor: #333;
+    --mainBgColor: #fff;
+    --sliderBgColor: rgb(162, 162, 162);
+    --sliderColor: rgb(255, 255, 255);
+    --sliderBgColor-clicked: rgb(24, 184, 66);
+
+
+
+    /* Dark Colors */
+    --mainTextColor-dark: #fff;
+    --secondaryTextColor-dark: #aeaeae;
+    --mainLinkColor-dark: #18cc546e;
+    --mainBorderColor-dark: rgb(91, 91, 91);
+    --mainBgColor-dark: rgb(3, 9, 24);
+
+}
+
+/* Dark Mode */
+[html-theme="dark"] {
+    --mainTextColor: var(--mainTextColor-dark);
+    --secondaryTextColor: var(--secondaryTextColor-dark);
+    --mainLinkColor: var(--mainLinkColor-dark);
+    --mainBorderColor: var(--mainBorderColor-dark);
+    --mainBgColor: var(--mainBgColor-dark);
+
+}
+
+
+
+
+a {
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+}
+
+
+
+li {
+    margin: .75rem 0;
+    line-height: 1.5rem;
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+h1 {
+    margin: 2.5rem 0;
+}
+
+/* * */
+.section {
+    height: 100%;
+    width: 100%;
+    padding: 2rem 4rem;
+    font-family: "Roboto", serif;
+}
+
+#resume__container {
+
+    padding: 8rem 4rem;
+}
+
+
+.section__page {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+
+/* # HERO CSS */
+
+#hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem
+}
+
+
+#headshot {
+
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+
+}
+
+
+#bio,
+a {
+    font-weight: 300;
+}
+
+#name {
+    font-size: 48px;
+}
+
+.information {
+    margin-top: 1rem;
+}
+
+
+
+#email {}
+
+#socials {
+    display: flex;
+    justify-content: center;
+    column-gap: 1em;
+    flex-wrap: wrap;
+    margin-top: .5em;
+    gap: 1rem;
+}
+
+#socials a {
+    color: var(--mainTextColor);
+    font-size: 0.9em;
+    background: #ffffff;
+    border: 1px solid var(--mainBorderColor);
+    padding: .5em .5em;
+    background-color: #e0e0e0ed;
+
+}
+
+#socials a:hover {
+    background-color: #5d6773;
+    transition: .3s;
+}
+
+/* # Programming Languages CSS */
+
+#tech__stacks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-size: 0.9em;
+
+}
+
+
+.card__stack {
+    border: 1px solid var(--mainBorderColor);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+
+}
+
+
+/* # WORK CSS */
+
+
+
+.work__card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+    margin-top: 3em;
+    padding-left: 2em;
+    border-left: 1px solid var(--mainBorderColor);
+}
+
+.workTitle {
+    font-weight: 400;
+
+}
+
+
+.line-break {
+    margin-bottom: 2em;
+    height: 1px;
+    background-color: var(--mainBorderColor);
+
+}
+
+.work__date {
+    margin-bottom: 1em;
+    font-weight: 300;
+}
+
+.jobDesc {
+
+    margin-top: .5em;
+    list-style: disc;
+    font-size: 1em;
+}
+
+.education__card {
+    margin-bottom: 2em;
+    margin-top: 3em;
+    padding-left: 2em;
+    border-left: 1px solid var(--mainBorderColor);
+}
+
+.degree {
+    display: flex;
+    justify-content: space-between;
+}
+
+.degree p {
+    margin-right: .5em;
+}
+
+
+.education__card li {
+    list-style: disc;
+
+}
+
+
+.school__title {
+    font-weight: 400;
+}
+
+.accomplishments {
+    margin: -1.5rem 0;
+}
+
+.accomplishments p {
+    text-decoration: underline var(--mainBorderColor);
+}
+
+
+
+@media(max-width: 1000px) {
+    .section__page {
+        padding: 1em 1em;
+
+    }
+
+    #resume__container {
+        max-width: auto;
+        margin: 0 auto;
+    }
+
+
+}
+
+
+
+
+@media(max-width: 600px) {
+    #resume__container {
+        max-width: auto;
+        margin: 0 auto;
+    }
+
+
+    .section__page {
+        padding: 1em 1em;
+
+    }
+
+    #hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #headshot {
+        border-radius: 0;
+        width: 200px;
+        height: 250px;
+    }
+}
+
+
+@media(max-width: 320px) {
+    #resume__container {
+        max-width: auto;
+        margin: 0 auto;
+        font-size: 1em;
+    }
+
+
+    .section__page {
+        padding: 1em 1em;
+
+    }
+
+    #hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5em;
+    }
+
+    #name {
+        font-size: 25px;
+    }
+
+    #headshot {
+        border-radius: 0;
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+    }
+
+    #socials {
+        gap: 1em;
+    }
+}
