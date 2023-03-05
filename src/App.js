@@ -22,9 +22,7 @@ function App() {
           <CssBaseline>
             <Navbar />
             <Routes>
-
-              <Route path='/' element={<Navigate to='/home' replace />} />
-              <Route path='/home' element={<Home />} />
+              <Route path='/' element={<Home />} />
               <Route path='/resume' element={<Resume />} />
               <Route path='/projects' element={<Navigate to='/projects' />} />
               <Route path='/about' element={<Navigate to='/about' />} />
