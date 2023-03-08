@@ -1,6 +1,6 @@
 import {Box, Button, Typography, useMediaQuery} from '@mui/material'
 import React from 'react'
-import Section from '../components/Section'
+import Section from '../../components/Section'
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import FactCheckOutlinedIcon from '@mui/icons-material/FactCheckOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';

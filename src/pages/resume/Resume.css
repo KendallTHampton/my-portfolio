@@ -122,6 +122,8 @@ a {
     flex-wrap: wrap;
     margin-top: .5em;
     gap: 1rem;
+    align-items: center;
+    font-size: 1rem;
 }
 
 #socials a {

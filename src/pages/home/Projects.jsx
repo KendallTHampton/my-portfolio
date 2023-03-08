@@ -1,11 +1,11 @@
 import {Box, Card, CardActions, CardContent, Collapse, Button, Typography, CardActionArea, useTheme, useMediaQuery, Tooltip} from '@mui/material'
 import React, {useEffect, useState} from 'react'
-import Section from '../components/Section'
+import Section from '../../components/Section'
 import {createClient} from '@sanity/client';
 
 const client = createClient({
-    projectId: 'sohbnlp6',
-    dataset: 'production',
+    projectId: process.env.REACT_APP_ID,
+    dataset: process.env.REACT_APP_DATASET,
     useCdn: true,
 });
 
@@ -30,8 +30,6 @@ const Projects = () => {
         fetchProjects();
 
     }, []);
-
-
 
 
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -59,7 +57,7 @@ const Projects = () => {
 
                 }}
             >
-                {projects.map(({image, description, name, link}, index) => {
+                {projects.slice(1).map(({image, description, name, link}, index) => {
                     return (
 
                         <Card
@@ -73,7 +71,9 @@ const Projects = () => {
                             }}
                         >
                             <CardActionArea
-
+                                onClick={() => {
+                                    window.open(link, "_blank")
+                                }}
                             >
                                 <Tooltip title={name} placement="top">
                                     <CardContent

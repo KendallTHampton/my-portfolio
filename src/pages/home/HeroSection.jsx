@@ -1,10 +1,11 @@
 import {Box, Button, Typography, useMediaQuery, useTheme} from '@mui/material'
 import TypeWriterEffect from 'react-typewriter-effect';
 import React from 'react'
-import Section from '../components/Section'
-import headshot from "../assets/headshot.png"
+import Section from '../../components/Section'
+import headshot from "../../assets/headshot.png"
 import {GitHub, LinkedIn} from '@mui/icons-material'
 import {motion} from 'framer-motion';
+import resumePDF from "../../assets/Kendall_Hampton_Resume.pdf"
 
 
 const HeroSection = () => {
@@ -99,6 +100,10 @@ const HeroSection = () => {
                             <Box display='flex' gap="2rem" alignItems="center" justifyContent="center">
                                 <Button
                                     variant="contained"
+                                    onClick={() => {
+                                        window.open(resumePDF, '_blank')
+                                    }
+                                    }
                                     sx={{
                                         fontSize: isSmall && ".7rem",
                                         marginTop: '1rem',
@@ -111,7 +116,7 @@ const HeroSection = () => {
                                         }
 
                                     }}>
-                                    Check out my resume
+                                    PDF Of My Resume
                                 </Button>
                                 <Button
                                     variant="contained"
@@ -130,8 +135,21 @@ const HeroSection = () => {
                             </Box>
 
                             <Box display='flex' m=" 1rem 0" gap="1rem">
-                                <GitHub sx={{fontSize: "3rem"}} />
-                                <LinkedIn sx={{fontSize: "3rem"}} />
+                                <GitHub
+                                    sx={{
+                                        fontSize: "3rem",
+                                        cursor: "pointer"
+
+                                    }}
+                                    onClick={() => {window.open("https://github.com/KendallTHampton", "_blank")}}
+                                />
+                                <LinkedIn
+                                    sx={{
+                                        fontSize: "3rem",
+                                        cursor: "pointer"
+                                    }}
+                                    onClick={() => {window.open("https://www.linkedin.com/in/kendall-hampton-5b1b1b1b9/", "_blank")}}
+                                />
                             </Box>
                         </Box>
                     </motion.div>
