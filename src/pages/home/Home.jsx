@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import HeroSection from './HeroSection';
 import Projects from './Projects';
 import Background from './Background';
