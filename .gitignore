@@ -10,6 +10,7 @@
 
 # production
 /build
+./portfolio./.env
 
 # misc
 .DS_Store
