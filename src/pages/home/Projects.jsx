@@ -3,6 +3,8 @@ import React, {useEffect, useState} from 'react'
 import Section from '../../components/Section'
 import {createClient} from '@sanity/client';
 
+console.log(process.env.REACT_APP_ID)
+
 const client = createClient({
     projectId: process.env.REACT_APP_ID,
     dataset: process.env.REACT_APP_DATASET,
