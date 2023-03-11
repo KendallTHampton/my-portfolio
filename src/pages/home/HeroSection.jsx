@@ -82,7 +82,7 @@ const HeroSection = () => {
                                     ]}
                                     nextTextDelay={5000}
                                     multiTextLoop={true}
-                                    typeSpeed={50}
+                                    typeSpeed={45}
                                 />
 
                             </Typography>
