@@ -8,12 +8,11 @@ import {schemaTypes} from './schemas/index.js'
 export default defineConfig({
   name: 'default',
   title: 'portfolio',
-
-  projectId: 'sohbnlp6',
-  dataset: 'production',
-
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID,
+  dataset: process.env.SANITY_STUDIO_DATASET,
+  apiVersion: '2021-03-25',
+  useCdn: false,
   plugins: [deskTool(), visionTool()],
-
   schema: {
     types: schemaTypes,
   },
