@@ -16,6 +16,7 @@ const Projects = () => {
     const [projects, setProjects] = useState([]);
     const [expandedStates, setExpandedStates] = useState(projects.map(() => false));
 
+
     useEffect(() => {
         async function fetchProjects() {
             const query = `*[_type == "project"] {
@@ -34,6 +35,12 @@ const Projects = () => {
     }, []);
 
 
+    const selectedProjects = projects.filter((project) => project.name === 'Pomodoro App' || project.name === 'Weather App' || project.name === 'Admin Dashboard')
+
+    console.log(selectedProjects)
+
+
+
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
@@ -47,7 +54,6 @@ const Projects = () => {
                 display="grid"
                 gridTemplateColumns="repeat(3, minmax(0, auto))"
                 gridAutoRows="minmax(0, auto)"
-
                 alignContent="center"
                 justifyItems="center"
                 rowGap="20px"
@@ -59,7 +65,7 @@ const Projects = () => {
 
                 }}
             >
-                {projects.slice(1).map(({image, description, name, link}, index) => {
+                {selectedProjects.map(({image, description, name, link}, index) => {
                     return (
 
                         <Card
@@ -106,8 +112,9 @@ const Projects = () => {
                                     variant="primary"
                                     size="small"
                                     onClick={() => {
-                                        const index = projects.findIndex((p) => p.name === name);
+                                        const index = selectedProjects.findIndex((p) => p.name === name);
                                         const newExpandedStates = [...expandedStates];
+                                        console.log(expandedStates)
                                         newExpandedStates[index] = !newExpandedStates[index];
                                         setExpandedStates(newExpandedStates);
                                     }}
