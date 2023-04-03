@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {setTheme} from "../store/reducers/theme";
 import {useTheme, useMediaQuery} from "@mui/material";
 import AppBar from "@mui/material/AppBar";
@@ -13,6 +13,8 @@ import ListItem from "@mui/material/ListItem";
 import {useNavigate} from "react-router-dom";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
+
+
 const Navbar = () => {
     const pages = ["Home", "Resume", "All Projects"];
     const dispatch = useDispatch();
@@ -23,6 +25,7 @@ const Navbar = () => {
     const toggleDrawer = () => {
         setOpenDrawer(!openDrawer);
     };
+
 
     return (
         <div>
@@ -77,6 +80,7 @@ const Navbar = () => {
                                             ? () => navigate(`/${ page.toLowerCase() }`)
                                             : () => {
                                                 navigate("/projects");
+
                                             }
                                     }
                                     key={page}

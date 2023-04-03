@@ -28,7 +28,7 @@ function App() {
           </Routes>
         </ThemeProvider>
       </Router>
-    </div >
+    </div>
   );
 }
 

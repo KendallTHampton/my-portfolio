@@ -6,9 +6,11 @@ import headshot from "../../assets/headshot.png"
 import {GitHub, LinkedIn} from '@mui/icons-material'
 import {motion} from 'framer-motion';
 import resumePDF from "../../assets/Kendall_Hampton_Resume.pdf"
+import {useNavigate} from 'react-router-dom';
 
 
 const HeroSection = () => {
+    const navigate = useNavigate();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
@@ -120,6 +122,9 @@ const HeroSection = () => {
                                 </Button>
                                 <Button
                                     variant="contained"
+                                    onClick={() => {
+                                        navigate('/projects')
+                                    }}
                                     sx={{
                                         fontSize: isSmall && ".7rem",
                                         marginTop: '1rem',
@@ -148,7 +153,7 @@ const HeroSection = () => {
                                         fontSize: "3rem",
                                         cursor: "pointer"
                                     }}
-                                    onClick={() => {window.open("https://www.linkedin.com/in/kendall-hampton-5b1b1b1b9/", "_blank")}}
+                                    onClick={() => {window.open("https://www.linkedin.com/in/kendall-hampton123/", "_blank")}}
                                 />
                             </Box>
                         </Box>

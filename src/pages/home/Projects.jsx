@@ -37,10 +37,6 @@ const Projects = () => {
 
     const selectedProjects = projects.filter((project) => project.name === 'Pomodoro App' || project.name === 'Weather App' || project.name === 'Admin Dashboard')
 
-    console.log(selectedProjects)
-
-
-
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
