@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {setTheme} from "../store/reducers/theme";
 import {useTheme, useMediaQuery} from "@mui/material";
 import AppBar from "@mui/material/AppBar";
