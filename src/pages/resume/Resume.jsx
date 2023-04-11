@@ -3,7 +3,6 @@ import headshot from "../../assets/headshot.png";
 import resumePDF from "../../assets/Kendall_Hampton_Resume.pdf";
 import styles from "./Resume.module.css";
 
-
 const Resume = () => {
     useEffect(() => {
         window.scrollTo(0, 0); // Scroll to the top of the page
