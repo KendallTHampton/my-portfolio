@@ -1,5 +1,4 @@
 import React, {useEffect} from "react";
-import "./Resume.css";
 import headshot from "../../assets/headshot.png";
 import resumePDF from "../../assets/Kendall_Hampton_Resume.pdf";
 import styles from "./Resume.module.css";
@@ -38,7 +37,7 @@ const Resume = () => {
                         Download PDF Version
                     </a>
                     <a
-                        href='http://www.linkedin.com/in/kendall-hampton-3b6258139'
+                        href='http://www.linkedin.com/in/kendall-hampton123'
                         target='blank'>
                         LinkedIn
                     </a>
