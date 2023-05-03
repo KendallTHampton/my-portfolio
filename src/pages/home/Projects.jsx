@@ -35,7 +35,8 @@ const Projects = () => {
     }, []);
 
 
-    const selectedProjects = projects.filter((project) => project.name === 'Pomodoro App' || project.name === 'Weather App' || project.name === 'Admin Dashboard')
+    const selectedProjects = projects.filter((project) => project.name === 'Pomodoro App' || project.name === 'Admin Dashboard' || project.name === "Sales CRM")
+
 
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
