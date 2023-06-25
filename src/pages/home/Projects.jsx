@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react'
 import Section from '../../components/Section'
 import {createClient} from '@sanity/client';
 
-console.log(process.env.REACT_APP_ID)
 
 const client = createClient({
     projectId: process.env.REACT_APP_ID,
@@ -24,7 +23,6 @@ const Projects = () => {
                 description,
                  link,
                 "image": image.asset->url,
-             
             }`
             const result = await client.fetch(query);
             setProjects(result);
@@ -35,8 +33,8 @@ const Projects = () => {
     }, []);
 
 
-    const selectedProjects = projects.filter((project) => project.name === 'Pomodoro App' || project.name === 'Admin Dashboard' || project.name === "Sales CRM")
-
+    const selectedProjects = projects.filter((project) => project.name === 'Pomodoro App' || project.name === 'Admin Dashboard' || project.name === "Sales CRM" || project.name === "Chat-Bot Application")
+console.log(selectedProjects)
 
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
