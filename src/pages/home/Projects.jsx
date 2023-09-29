@@ -33,7 +33,7 @@ const Projects = () => {
     }, []);
 
 
-    const selectedProjects = projects.filter((project) => project.name === 'Pomodoro App' || project.name === 'Admin Dashboard' || project.name === "Sales CRM" || project.name === "Chat-Bot Application")
+    const selectedProjects = projects.filter((project) => project.name === 'Pomodoro App' || project.name === 'Admin Dashboard' || project.name === "Sales CRM" || project.name === "Chat-Bot Application" || project.name === "AirBnB Clone")
 console.log(selectedProjects)
 
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
